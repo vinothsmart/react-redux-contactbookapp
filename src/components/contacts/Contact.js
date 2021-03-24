@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+
 export const Contact = () => {
+  const contacts = useSelector((state) => state.contacts);
+  console.log("contacts", contacts);
   return (
     <div>
       <table class="table table-shadow table-striped">
