@@ -11,6 +11,14 @@ export const Contacts = ({ contacts }) => {
       </td>
       <td>{phone}</td>
       <td>{email}</td>
+      <td>
+        <a href="#">
+          <span className="material-icons">edit</span>
+        </a>
+        <a href="#">
+          <span className="material-icons">remove_circle</span>
+        </a>
+      </td>
     </tr>
   );
 };
