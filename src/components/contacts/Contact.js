@@ -5,7 +5,7 @@ export const Contact = () => {
   console.log("contacts", contacts);
   return (
     <div>
-      <table class="table table-shadow table-striped">
+      <table className="table table-shadow table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -15,23 +15,16 @@ export const Contact = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {contacts.map((contacts) => {
+            return (
+              <tr>
+                <th scope="row">{contacts.id}</th>
+                <td>{contacts.name}</td>
+                <td>{contacts.phone}</td>
+                <td>{contacts.rmail}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
