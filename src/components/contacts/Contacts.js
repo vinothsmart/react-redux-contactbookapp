@@ -1,10 +1,11 @@
-export const Contacts = (props) => {
+export const Contacts = ({ contacts }) => {
+  const { id, name, email, phone } = contacts;
   return (
     <tr>
-      <th scope="row">{props.contacts.id}</th>
-      <td>{props.contacts.name}</td>
-      <td>{props.contacts.phone}</td>
-      <td>{props.contacts.email}</td>
+      <th scope="row">{id}</th>
+      <td>{name}</td>
+      <td>{phone}</td>
+      <td>{email}</td>
     </tr>
   );
 };
