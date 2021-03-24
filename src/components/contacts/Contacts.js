@@ -6,6 +6,7 @@ export const Contacts = ({ contacts }) => {
       <td>{name}</td>
       <td>{phone}</td>
       <td>{email}</td>
+      <Avatar
     </tr>
   );
 };
