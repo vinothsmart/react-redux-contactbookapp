@@ -1,7 +1,7 @@
 export const Contact = () => {
   return (
     <div>
-      <table class="table table-dark table-striped">
+      <table class="table table-shadow table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
