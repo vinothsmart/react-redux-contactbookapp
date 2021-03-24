@@ -9,9 +9,9 @@ export const Contact = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
           </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@ export const Contact = () => {
                 <th scope="row">{contacts.id}</th>
                 <td>{contacts.name}</td>
                 <td>{contacts.phone}</td>
-                <td>{contacts.rmail}</td>
+                <td>{contacts.email}</td>
               </tr>
             );
           })}
