@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Contacts } from "./Contacts";
 
 export const Contact = () => {
   const contacts = useSelector((state) => state.contacts);
@@ -16,14 +17,7 @@ export const Contact = () => {
         </thead>
         <tbody>
           {contacts.map((contacts) => {
-            return (
-              <tr>
-                <th scope="row">{contacts.id}</th>
-                <td>{contacts.name}</td>
-                <td>{contacts.phone}</td>
-                <td>{contacts.email}</td>
-              </tr>
-            );
+            return <Contacts contacts={contacts} />;
           })}
         </tbody>
       </table>
