@@ -3,6 +3,7 @@ import { Contact } from "./components/contacts/Contact";
 import { NavBar } from "./components/NavBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "./store";
+import { AddContact } from "./components/contacts/AddContact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <div className="py-3">
               <Switch>
                 <Route exact path="/" component={Contact} />
+                <Route exact path="/contacts/add" component={AddContact} />
               </Switch>
             </div>
           </div>
