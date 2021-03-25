@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 import shortid from "shortid";
 import { addContact } from "../../store";
 
 export const AddContact = () => {
+  let history = useHistory();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -21,6 +23,7 @@ export const AddContact = () => {
       phone: phone,
     };
     dispatch(addContact(newContact));
+    history.push("/");
   };
 
   return (
