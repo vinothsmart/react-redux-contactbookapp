@@ -18,7 +18,7 @@ export const Contact = () => {
         </thead>
         <tbody>
           {contacts.map((contacts) => {
-            return <Contacts contacts={contacts} />;
+            return <Contacts contacts={contacts} key={contacts.id} />;
           })}
         </tbody>
       </table>
