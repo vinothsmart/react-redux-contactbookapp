@@ -13,7 +13,12 @@ export const AddContact = () => {
     console.log("name", name);
     console.log("phone", phone);
     console.log("email", email);
-    dispatch(addContact());
+    const newContact = {
+      name: name,
+      email: email,
+      phone: phone,
+    };
+    dispatch(addContact(newContact));
   };
 
   return (
