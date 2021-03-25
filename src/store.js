@@ -1,6 +1,13 @@
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
+export const addContact = (contact) => {
+  return {
+    type: "CREATE_CONTACT",
+    contact: contact,
+  };
+};
+
 const initalState = {
   contacts: [
     {
