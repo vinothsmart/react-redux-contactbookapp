@@ -4,7 +4,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 export const addContact = (contact) => {
   return {
     type: "CREATE_CONTACT",
-    contact: contact,
+    payload: contact,
   };
 };
 
@@ -245,6 +245,10 @@ const initalState = {
 
 const contactReducer = (state = initalState, action) => {
   switch (action.type) {
+    case "CREATE_CONTACT":
+      return {
+        contacts: [action.payload],
+      };
     default:
       return state;
   }
