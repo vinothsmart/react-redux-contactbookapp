@@ -12,7 +12,9 @@ function App() {
           <NavBar />
           <div className="container">
             <div className="py-3">
-              <Contact />
+              <Switch>
+                <Route exact path="/" component={Contact} />
+              </Switch>
             </div>
           </div>
         </div>
