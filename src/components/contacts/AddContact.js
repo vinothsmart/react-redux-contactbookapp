@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import shortid from "shortid";
-import { addContact } from "../../store";
+import { addContact } from "../../actions/contactaction";
 
 export const AddContact = () => {
   let history = useHistory();
