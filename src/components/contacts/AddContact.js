@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import shortid from "shortid";
 import { addContact } from "../../store";
 
 export const AddContact = () => {
@@ -14,6 +15,7 @@ export const AddContact = () => {
     console.log("phone", phone);
     console.log("email", email);
     const newContact = {
+      id: shortid.generate(),
       name: name,
       email: email,
       phone: phone,
