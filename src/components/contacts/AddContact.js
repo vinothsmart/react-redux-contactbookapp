@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addContact } from "../../store";
 
 export const AddContact = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const dispatch = useDispatch(function);
+  const dispatch = useDispatch();
 
   const createContact = (e) => {
     e.preventDefault();
     console.log("name", name);
     console.log("phone", phone);
     console.log("email", email);
+    dispatch(addContact());
   };
 
   return (
