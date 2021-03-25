@@ -247,6 +247,7 @@ const contactReducer = (state = initalState, action) => {
   switch (action.type) {
     case "CREATE_CONTACT":
       return {
+        ...state,
         contacts: [action.payload, ...state.contacts],
       };
     default:
