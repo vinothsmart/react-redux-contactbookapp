@@ -233,7 +233,7 @@ const initalState = {
   ],
 };
 
-const contactReducer = (state = initalState, action) => {
+export const contactReducer = (state = initalState, action) => {
   switch (action.type) {
     case "CREATE_CONTACT":
       return {
