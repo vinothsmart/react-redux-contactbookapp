@@ -2,10 +2,13 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../actions/contactaction";
 import shortid from "shortid";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 export const EditContact = () => {
+  let { id } = useParams();
   let history = useHistory();
+
+  console.log("useParams", id);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
