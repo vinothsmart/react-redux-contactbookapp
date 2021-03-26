@@ -13,7 +13,7 @@ export const Contacts = ({ contacts }) => {
       <td>{phone}</td>
       <td>{email}</td>
       <td>
-        <Link to="/contacts/edit/:id">
+        <Link to={`/contacts/edit/${id}`}>
           <span className="material-icons">edit</span>
         </Link>
         <a href="#">
