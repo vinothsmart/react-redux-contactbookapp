@@ -244,7 +244,9 @@ export const contactReducer = (state = initalState, action) => {
         contacts: [action.payload, ...state.contacts],
       };
     case GET_CONTACT:
-      let arr = state.contacts.filter(() => contact.id == action.payload.id);
+      let arr = state.contacts.filter(
+        (contacts) => contacts.id == action.payload.id
+      );
       arr = arr.values();
       for (let val of arr) {
         arr = val;
