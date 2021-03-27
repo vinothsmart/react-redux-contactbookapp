@@ -26,12 +26,22 @@ export const EditContact = () => {
     dispatch(getContact(id));
   }, [contact]);
 
+  const onUpdateContact = (e) => {
+    e.preventDefault();
+
+    const updateContact = Object.assign(contact, {
+      name: name,
+      email: email,
+      phone: phone,
+    });
+  };
+
   return (
     <div>
       <div className="card border-0 shadow">
         <div className="card-header">Add a contact</div>
         <div className="card-body">
-          <form>
+          <form onSubmit={(e) => onUpdateContact(e)}>
             <div className="form-group mb-3">
               <input
                 type="text"
@@ -65,8 +75,8 @@ export const EditContact = () => {
                 }}
               />
             </div>
-            <button className="btn btn-primary" type="submit">
-              Add
+            <button className="btn btn-danger" type="submit">
+              Edit Contact
             </button>
           </form>
         </div>
