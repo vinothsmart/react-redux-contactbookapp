@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getContact } from "../../actions/contactaction";
 import shortid from "shortid";
 import { useHistory, useParams } from "react-router-dom";
@@ -8,15 +8,23 @@ export const EditContact = () => {
   let { id } = useParams();
   let history = useHistory();
 
+  const contact = useSelector((state) => state.contacts.contact);
+
   console.log("useParams", id);
-  useEffect(() => {
-    dispatch(getContact(id));
-  }, []);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (contact != null) {
+      setName(contact.name);
+      setPhone(contact.phone);
+      setEmail(contact.email);
+    }
+    dispatch(getContact(id));
+  }, [contact]);
 
   return (
     <div>
