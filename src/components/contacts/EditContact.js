@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getContact } from "../../actions/contactaction";
+import { getContact, updateContact } from "../../actions/contactaction";
 import shortid from "shortid";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -29,11 +29,15 @@ export const EditContact = () => {
   const onUpdateContact = (e) => {
     e.preventDefault();
 
-    const updateContact = Object.assign(contact, {
+    const updateContacted = Object.assign(contact, {
       name: name,
       email: email,
       phone: phone,
     });
+
+    dispatch(updateContact(updateContacted));
+
+    history.push("/");
   };
 
   return (
