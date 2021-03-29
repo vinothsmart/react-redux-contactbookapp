@@ -5,6 +5,7 @@ import {
   DELETE_CONTACT,
   SELECT_CONTACT,
   CLEAR_CONTACT,
+  DELETE_ALL,
 } from "../constant/types";
 
 // add contact
@@ -40,4 +41,9 @@ export const selectAllContact = (id) => ({
 // clear contact
 export const clearAllContact = () => ({
   type: CLEAR_CONTACT,
+});
+
+// delete selected contacts
+export const deleteAllContact = () => ({
+  type: DELETE_ALL,
 });

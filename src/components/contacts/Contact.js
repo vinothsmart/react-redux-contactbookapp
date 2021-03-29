@@ -19,7 +19,7 @@ export const Contact = () => {
   console.log("contacts", contacts);
 
   const selectedContacts = useSelector(
-    (state) => state.contact.selectedContacts
+    (state) => state.contacts.selectedContacts
   );
 
   return (
