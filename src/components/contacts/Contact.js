@@ -37,7 +37,13 @@ export const Contact = () => {
         </thead>
         <tbody>
           {contacts.map((contacts) => {
-            return <Contacts contacts={contacts} key={contacts.id} />;
+            return (
+              <Contacts
+                contacts={contacts}
+                key={contacts.id}
+                SelectAll={SelectAll}
+              />
+            );
           })}
         </tbody>
       </table>
