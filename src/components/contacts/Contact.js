@@ -1,9 +1,18 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAllContact } from "../../actions/contactaction";
 import { Contacts } from "./Contacts";
 
 export const Contact = () => {
+  const dispatch = useDispatch();
   const [SelectAll, setSelectAll] = useState(false);
+
+  useEffect(() => {
+    if (SelectAll) {
+      dispatch(selectAllContact(contacts.map((contact) => contact.id)));
+    }
+  }, [SelectAll]);
+
   const contacts = useSelector((state) => state.contacts.contacts);
   console.log("contacts", contacts);
   return (
