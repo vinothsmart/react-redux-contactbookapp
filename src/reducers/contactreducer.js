@@ -271,7 +271,7 @@ export const contactReducer = (state = initalState, action) => {
       return {
         ...state,
         contacts: state.contacts.filter(
-          (contact) => contact.id != action.payload.id
+          (contact) => contact.id != action.payload
         ),
       };
     default:
