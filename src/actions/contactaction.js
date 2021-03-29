@@ -10,7 +10,7 @@ export const getContact = (id) => ({
   payload: id,
 });
 
-export const updateContact = (id) => ({
+export const updateContact = (contact) => ({
   type: UPDATE_CONTACT,
-  payload: id,
+  payload: contact,
 });
