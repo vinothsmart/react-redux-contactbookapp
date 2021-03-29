@@ -5,6 +5,7 @@ import {
   UPDATE_CONTACT,
   SELECT_CONTACT,
   CLEAR_CONTACT,
+  DELETE_ALL,
 } from "../constant/types";
 
 const initalState = {
@@ -287,7 +288,11 @@ export const contactReducer = (state = initalState, action) => {
         ...state,
         selectedContacts: [],
       };
-
+    case DELETE_ALL:
+      return {
+        ...state,
+        contacts: [],
+      };
     default:
       return state;
   }
