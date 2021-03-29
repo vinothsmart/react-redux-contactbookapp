@@ -3,6 +3,7 @@ import {
   GET_CONTACT,
   UPDATE_CONTACT,
   DELETE_CONTACT,
+  SELECT_CONTACT,
 } from "../constant/types";
 
 // add contact
@@ -26,5 +27,11 @@ export const updateContact = (contact) => ({
 // delete contact
 export const deleteContact = (id) => ({
   type: DELETE_CONTACT,
+  payload: id,
+});
+
+// select contact
+export const selectAllContact = (id) => ({
+  type: SELECT_CONTACT,
   payload: id,
 });
