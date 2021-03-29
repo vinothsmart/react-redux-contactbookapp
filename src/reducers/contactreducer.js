@@ -3,6 +3,7 @@ import {
   DELETE_CONTACT,
   GET_CONTACT,
   UPDATE_CONTACT,
+  SELECT_CONTACT,
 } from "../constant/types";
 
 const initalState = {
@@ -239,6 +240,7 @@ const initalState = {
     },
   ],
   contact: null,
+  selectedContacts: [],
 };
 
 export const contactReducer = (state = initalState, action) => {
@@ -273,6 +275,11 @@ export const contactReducer = (state = initalState, action) => {
         contacts: state.contacts.filter(
           (contact) => contact.id != action.payload
         ),
+      };
+    case SELECT_CONTACT:
+      return {
+        ...state,
+        selectedContacts: action.payload,
       };
     default:
       return state;
