@@ -16,9 +16,9 @@ export const Contacts = ({ contacts }) => {
         <Link to={`/contacts/edit/${id}`}>
           <span className="material-icons">edit</span>
         </Link>
-        <a href="#">
+        <Link to="#">
           <span className="material-icons">remove_circle</span>
-        </a>
+        </Link>
       </td>
     </tr>
   );
