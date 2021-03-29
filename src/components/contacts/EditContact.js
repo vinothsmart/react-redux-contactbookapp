@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getContact, updateContact } from "../../actions/contactaction";
-import shortid from "shortid";
 import { useHistory, useParams } from "react-router-dom";
 
 export const EditContact = () => {
