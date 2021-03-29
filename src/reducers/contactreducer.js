@@ -4,6 +4,7 @@ import {
   GET_CONTACT,
   UPDATE_CONTACT,
   SELECT_CONTACT,
+  CLEAR_CONTACT,
 } from "../constant/types";
 
 const initalState = {
@@ -281,6 +282,12 @@ export const contactReducer = (state = initalState, action) => {
         ...state,
         selectedContacts: action.payload,
       };
+    case CLEAR_CONTACT:
+      return {
+        ...state,
+        selectedContacts: [],
+      };
+
     default:
       return state;
   }
