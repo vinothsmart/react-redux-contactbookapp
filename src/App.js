@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import { Contact } from "./components/contacts/Contact";
 import { NavBar } from "./components/NavBar";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import store from "./store";
 import { AddContact } from "./components/contacts/AddContact";
 import { EditContact } from "./components/contacts/EditContact";
@@ -9,7 +9,7 @@ import { EditContact } from "./components/contacts/EditContact";
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename="/">
         <div className="App">
           <NavBar />
           <div className="container">
