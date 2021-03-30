@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-redux-contactbookapp/static/css/main.3a72e91c.chunk.css",
-    "main.js": "/react-redux-contactbookapp/static/js/main.10cfa203.chunk.js",
-    "main.js.map": "/react-redux-contactbookapp/static/js/main.10cfa203.chunk.js.map",
+    "main.js": "/react-redux-contactbookapp/static/js/main.ee9f73bd.chunk.js",
+    "main.js.map": "/react-redux-contactbookapp/static/js/main.ee9f73bd.chunk.js.map",
     "runtime-main.js": "/react-redux-contactbookapp/static/js/runtime-main.7a5c75ed.js",
     "runtime-main.js.map": "/react-redux-contactbookapp/static/js/runtime-main.7a5c75ed.js.map",
     "static/js/2.2ccc2b09.chunk.js": "/react-redux-contactbookapp/static/js/2.2ccc2b09.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7a5c75ed.js",
     "static/js/2.2ccc2b09.chunk.js",
     "static/css/main.3a72e91c.chunk.css",
-    "static/js/main.10cfa203.chunk.js"
+    "static/js/main.ee9f73bd.chunk.js"
   ]
 }
